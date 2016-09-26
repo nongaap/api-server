@@ -1,0 +1,23 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "api server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Puangmalai <mike@nongaap.com> (http://www.nongaap.com)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.1",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2"
+  }
+}
