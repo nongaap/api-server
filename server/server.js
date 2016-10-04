@@ -3,6 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var api = require('./routes/api');
+var create = require('./routes/create');
 
 var port = 3000;
 
@@ -20,12 +21,14 @@ app.use(bodyParser.json());
 
 app.use('/api', api);
 
+app.use('/create', create);
+
 app.get('/', function (req, res) {
-	res.status(200).send('Success');
+	res.status(200).send('Hi. Homepage');
 });
 
-app.get('*', function (req, res) {
-	res.status(404).send('Nothing There');
+app.all('*', function (req, res) {
+  res.status(404).send('Nothing There');
 });
 
 module.exports = server;
